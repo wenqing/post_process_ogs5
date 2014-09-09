@@ -74,51 +74,30 @@ int main(int argc, char* argv[])
 
 
    int msize_o; // Original processor number
+   is >> msize_o >> ws;
+
    int nsteps;  // Number of time steps 
-
-   getline(is, s_buff);
-   ss.str(s_buff);
-   ss >> msize_o;
-   ss.clear(); 
-
-
-   getline(is, s_buff);
-   ss.str(s_buff);
-   ss >> nsteps;
-   ss.clear(); 
-
-  
+   is >> nsteps >> ws;
 
    string pcs_name;
    int nvars;
    size_t data_size;
    vector<string> variable_names;
 
-   getline(is, s_buff);
-   ss.str(s_buff);
-   ss >> pcs_name;
-   ss.clear(); 
+   is >> pcs_name;
 
-   getline(is, s_buff);
-   ss.str(s_buff);
-   ss >> nvars;
-   ss.clear(); 
+   is >> nvars >> ws;
 
    variable_names.resize(nvars);
-   getline(is, s_buff);
-   ss.str(s_buff);
+
    for(size_t j=0; j<nvars; j++)
    {
-       ss >> variable_names[j];	  
+       is >> variable_names[j];	  
    }
-   ss.clear();  
+   is >> ws;  
       
-   getline(is, s_buff);
-   ss.str(s_buff);
-   ss >>  data_size;
-   ss.clear();
+   is >>  data_size >> ws;
 
-   is.clear();
    is.close();
 
    // Read header file
@@ -166,8 +145,9 @@ int main(int argc, char* argv[])
           cout<<"Convert "<<variable_names[j]<<endl;
 	  for(size_t i=0; i<data_size; i++)
           {
-	      os << value[i] <<endl;
+	      os << value[i] << "\n";
           }
+          os.flush();	  
 	  os << endl;
            
           if(is.eof())
@@ -179,9 +159,7 @@ int main(int argc, char* argv[])
       os.close();
    }
 
-   is.clear();
    is.close();
-
 
    elp_time += clock();
    cout<<"\n***Total CPU time elapsed: "
