@@ -17,7 +17,7 @@ The binary file of nodal solutiuons can be generated if ``$DAT_TYPE`` for domain
    STEPS 1
    
 ```
-a number of binary files of nodal varariables are generated after a parallel computation. The files names take the form as
+A number of binary files of nodal varariables are generated after a parallel computation. The files names take the form as
 ```
 [input file name]_[process name]_domain_node_value_header.txt
 [input file name]_[process name]_domain_variables.bin   
