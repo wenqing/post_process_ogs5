@@ -1,7 +1,7 @@
 ``post_process_ogs5``
 
 =================
-This code can be used to get gloabal solutions from the subdomains, which are caculated by using PETSc solver,  collected and stored in binray file.
+This code is used to get gloabal solutions from the subdomains, which are caculated by using PETSc solver,  collected and stored in binray file.
 
 The binary file of nodal solutiuons can be generated if ``$DAT_TYPE`` for domain output is BINRAY, e.g.
 ```
