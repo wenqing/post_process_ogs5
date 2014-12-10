@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
    ifstream is(ifname.c_str());
    if(!is.good())
    {
-      cout << "File "<<fname<<" is not found."<<endl;
+      cout << "File "<<ifname<<" is not found."<<endl;
       exit(1);
    }
 
