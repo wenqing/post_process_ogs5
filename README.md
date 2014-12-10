@@ -3,7 +3,7 @@
 =================
 This code is used to convert the gloabal solutions from binary files that are created by parallel output of OGS, and then creat VTK files for visualization.
 
-The binary file of nodal solutiuons can be generated if ``$DAT_TYPE`` for domain output is BINRAY, e.g.
+The binary file of nodal solutiuons can be generated if ``$DATA_TYPE`` for domain output is BINRAY, e.g.
 ```
 #OUTPUT
 .
@@ -11,7 +11,7 @@ The binary file of nodal solutiuons can be generated if ``$DAT_TYPE`` for domain
 . 
  $GEO_TYPE
    DOMAIN 
- $DAT_TYPE
+ $DATA_TYPE
    BINRAY
  $TIM_TYPE
    STEPS 1
